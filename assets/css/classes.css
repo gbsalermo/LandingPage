@@ -1,0 +1,24 @@
+.main-bg{
+    /*reponsavel pelo background principal*/
+    background-image: url('../img/main_bg.svg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+}
+.white-bg{
+    /*background alternativo*/
+    background: var(--white-color);
+}
+.main-content{ 
+    /*O main-content vai sustentar o conteudo*/
+    max-width: 120rem; /*largura maxima do projeto*/
+    margin: 0 auto;
+    padding: var(--gap); /*Espaçamento padrão*/
+}
+.section {
+    min-height: 100vh; /*todo mundo com essa classe vai ter essa altura minima*/
+}
+
+.menu-spacing{
+    height: 65px;
+}
