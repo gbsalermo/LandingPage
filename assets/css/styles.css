@@ -1,7 +1,9 @@
 :root{ /* Criar variaveis*/
     --primary-color:#0A1128;
     --white-color: #ffffff;
+    --light-gray-color: #EEEEEE;
     --gap: 3rem;
+    
 }
 
 
@@ -9,6 +11,7 @@
     margin: 0;
     padding: 0;
 }
+    
 
 html{
     font-size: 62.5%;
@@ -44,6 +47,10 @@ h6{
     font-size: 3.5rem;
 }
 
+a{
+    text-decoration: none; 
+}
+
 .main-bg{
     /*reponsavel pelo background principal*/
     background-image: url('../img/main_bg.svg');
@@ -63,4 +70,60 @@ h6{
 }
 .section {
     min-height: 100vh; /*todo mundo com essa classe vai ter essa altura minima*/
+}
+.menu{
+    background: var(--white-color);
+    position: fixed; /*ele rola junto com a pag*/
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 2px solid var(--light-gray-color);
+}
+
+.menu-content{ 
+    /*Para separar o menu*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+
+
+}
+.menu h1{
+    font-size: 2.3rem;
+    color: var(--primary-color)
+}
+.menu h1 a{
+    color: inherit; 
+}
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.menu ul li a{
+   display: block;
+   padding: 1.8rem; /*para ficarem separados*/
+   font-size:1.8rem;
+   font-family: 'Montserrat', sans-serif;
+   color: var(--primary-color);
+   position: relative;
+}
+.menu ul li a::after{
+    /*Referente a linha abaixo dos menus*/
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 25%;
+    width: 0;
+    height: 0.2rem;
+    background: crimson;
+    transition: all 300ms ease-in-out; /*efeito*/
+}
+
+.menu ul li a:hover::after{
+    width: 50%;
 }
