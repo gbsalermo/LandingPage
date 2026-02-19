@@ -8,6 +8,7 @@
 .white-bg{
     /*background alternativo*/
     background: var(--white-color);
+    color: var(--primary-color);
 }
 .main-content{ 
     /*O main-content vai sustentar o conteudo*/
