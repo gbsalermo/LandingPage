@@ -14,7 +14,7 @@
     /*O main-content vai sustentar o conteudo*/
     max-width: 120rem; /*largura maxima do projeto*/
     margin: 0 auto;
-    padding: var(--gap); /*Espaçamento padrão*/
+    padding: 10rem var(--gap); /*Espaçamento padrão*/
 }
 .section {
     min-height: 100vh; /*todo mundo com essa classe vai ter essa altura minima*/
