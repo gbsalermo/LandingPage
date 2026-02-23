@@ -32,6 +32,20 @@
     justify-content: center;
     min-height: 100vh;
 }
+
+.menu{
+   bottom: 0;
+   text-align: center;
+
+}
+.menu-content, .menu-content ul{
+    flex-direction: column;
+    justify-content: center;
+}
+.menu-content{
+    height: 100vh;
+}
+
 .grid-main-heading{
    margin-bottom: 1rem;
 }
@@ -145,6 +159,7 @@
     padding: 3rem;
 }
 
+/*Adaptação para o mobile*/
 @media (max-width: 800px){
     .intro-content, .grid{
         grid-template-columns: 1fr;
