@@ -1,236 +1,254 @@
-.intro-content{ /*Alinhado texto da intro*/
-    position: relative;
-   /* top: -7rem;*/
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: var(--gap);
-    min-height: 100vh;
+.intro-content{ /* Alinhado texto da intro e imagem lado a lado */
+    position: relative; /* Posicionamento relativo (preparado para ajustes finos) */
+    /* top: -7rem; */ /* Linha comentada - se ativar, puxa conteúdo para cima */
+    display: grid; /* Ativa grid layout */
+    grid-template-columns: 1fr 1.5fr; /* 2 colunas: texto 1 parte, imagem 1.5 partes */
+    gap: var(--gap); /* Espaçamento entre colunas: 30px */
+    min-height: 100vh; /* Altura mínima de uma tela inteira */
 }
 
-.intro-text-content, .intro-img{
-    display: flex;
-    flex-flow: column wrap; /*Para alinhar*/
-    justify-content: center;
-}
-.intro-img img{
-    max-width: 100%;
-    min-height: auto;
-}
-.top3-content{
-    max-width: 64rem;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
-
+.intro-text-content, .intro-img{ /* Elementos internos da intro */
+    display: flex; /* Ativa flexbox */
+    flex-flow: column wrap; /* Coluna: um abaixo do outro, com wrap se necessário */
+    justify-content: center; /* Centraliza verticalmente */
 }
 
-.grid-one-content{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    min-height: 100vh;
+.intro-img img{ /* Imagem dentro da intro */
+    max-width: 100%; /* Não ultrapassa a largura do container */
+    min-height: auto; /* Altura automática (mantém proporção) */
 }
 
-
-
-.grid-main-heading{
-   margin-bottom: 1rem;
-}
-.grid-description{
-    padding-bottom: 5rem;
-}
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
-    counter-reset: grid-counter;
-}
-.grid h3{
-    font-size: 3rem;
-    position: relative;
-    padding-left: 5rem;
-    padding-bottom: 3rem;
-}
-.grid h3::before{
-    counter-increment: grid-counter;
-    content: counter(grid-counter);
-    position: absolute;
-    font-size: 8rem;
-    font-style: italic;
-    top: -3rem;
-    left: -1rem;
-    transform: rotate(5deg);
-}
-.gallery-img{
-    width: 100%;
-    max-width: 36rem;
-    max-height: 36rem;
-    overflow: hidden;
-}
-.gallery-img img{
-    transition: all 300ms ease-in-out;
-}
-.gallery-img img:hover{
-    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
-    
-}
-.grid img {
-    width: 100%;
-    min-height: 250px;
-    object-fit: cover;
-    object-position: center;
-}
-.gallery-img.poke2 img {
-    object-position: 50% 0%; /* puxa o foco mais para cima */
+.top3-content{ /* Conteúdo da seção top 3 jobs (texto centralizado) */
+    max-width: 64rem; /* Largura máxima: 640px (texto mais confortável) */
+    display: flex; /* Ativa flexbox */
+    flex-flow: column wrap; /* Coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Altura mínima de tela inteira */
+    text-align: center; /* Texto centralizado */
 }
 
-.contact-form{
-    grid-column: span 2;
-}
-.contact-form .form-grid{
-    border: none;
-    font-display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--gap);
+.grid-one-content{ /* Conteúdo das seções de grid (primeiro e segundo) */
+    display: flex; /* Ativa flexbox */
+    flex-flow: column wrap; /* Coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Altura mínima de tela inteira */
 }
 
-.form-grid legend{
-    font-style: italic;
-    font-size: 1.6rem;
-    margin-bottom: 3rem;
-
-}
-.form-group{
-    flex: 1 1 320px;
-}
-.form-group label{
-    display: block;
-}
-.form-group input, .form-group textarea{
-    border: none;
-    background: var(--white-color);
-    padding: 1.5rem 2rem;
-    width: 100%;
-    outline: none;
-}
-.form-group input:focus, .form-group textarea:focus{
-    box-shadow: 0 0  10px var(--secondary-color);
-}
-.form-group button{
-    margin-top: 2.5rem;
-    border: 0.5rem solid var(--white-color);
-    background: none;
-    color: var(--white-color);
-    padding: 1.5rem 2rem;
-    font-size: 3rem;
-    cursor: pointer;
-    transition: all 300ms ease-in-out;
-}
-.form-group button:hover{
-    border: 0.5rem solid var(--primary-color);
-    background: var(--white-color);
-    color: var(--primary-color);
-}
-.form-group::placeholder{
-    color: var(--light-gray-color);
-}
-.footer{
-    text-align: center;
-}
-.footer a{
-    color: #444;
-}
-.footer p{
-    margin: 0;
-    padding: 3rem;
+.grid-main-heading{ /* Título principal do grid (h2) */
+    margin-bottom: 1rem; /* Espaçamento inferior de 10px */
 }
 
-.close-menu{        
-  display: none;
-    }
-.back-to-top{
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background: var(--white-color);
-    width: 5rem;
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: var(--primary-color);
-    transform: rotate(-90deg); /*para por a seta pra cima*/
-    border: 0.3rem solid var(--primary-color);
+.grid-description{ /* Descrição/parágrafo abaixo do título */
+    padding-bottom: 5rem; /* Espaçamento inferior de 50px */
 }
 
-/*Adaptação para o mobile*/
+.grid{ /* Container do grid (os cards) */
+    display: grid; /* Ativa grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanhos iguais */
+    gap: var(--gap); /* Espaçamento entre colunas: 30px */
+    counter-reset: grid-counter; /* Inicia contador para numeração automática */
+}
+
+.grid h3{ /* Títulos dos cards */
+    font-size: 3rem; /* Tamanho: 30px */
+    position: relative; /* Para posicionar o número */
+    padding-left: 5rem; /* Espaço à esquerda para o número */
+    padding-bottom: 3rem; /* Espaço abaixo */
+}
+
+.grid h3::before{ /* Número antes do título (contador automático) */
+    counter-increment: grid-counter; /* Incrementa o contador a cada h3 */
+    content: counter(grid-counter); /* Mostra o número do contador */
+    position: absolute; /* Posicionado absolutamente */
+    font-size: 8rem; /* Tamanho: 80px (bem grande) */
+    font-style: italic; /* Itálico */
+    top: -3rem; /* Puxa 30px para cima */
+    left: -1rem; /* Puxa 10px para esquerda */
+    transform: rotate(5deg); /* Leve rotação */
+}
+
+.gallery-img{ /* Container das imagens da galeria */
+    width: 100%; /* Largura total */
+    max-width: 36rem; /* Largura máxima: 360px */
+    max-height: 36rem; /* Altura máxima: 360px */
+    overflow: hidden; /* Esconde partes da imagem que ultrapassam */
+}
+
+.gallery-img img{ /* Imagens da galeria */
+    transition: all 300ms ease-in-out; /* Transição suave no hover */
+}
+
+.gallery-img img:hover{ /* Efeito ao passar mouse na imagem */
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg); /* Move, aumenta e rotaciona */
+}
+
+.grid img { /* Imagens dentro de grids */
+    width: 100%; /* Largura total */
+    min-height: 250px; /* Altura mínima */
+    object-fit: cover; /* Cobre a área sem distorcer (corta se necessário) */
+    object-position: center; /* Centraliza o foco da imagem */
+}
+
+.gallery-img.poke2 img { /* Ajuste específico para imagem do pokemon 2 */
+    object-position: 50% 0%; /* Puxa o foco mais para cima (vertical) */
+}
+
+.contact-form{ /* Formulário de contato */
+    grid-column: span 2; /* Ocupa 2 colunas no grid (na seção intro) */
+}
+
+.contact-form .form-grid{ /* Grid do formulário */
+    border: none; /* Remove borda padrão do fieldset */
+    display: flex; /* Ativa flexbox para os campos */
+    flex-direction: row; /* Direção em linha */
+    flex-wrap: wrap; /* Quebra linha se necessário */
+    gap: var(--gap); /* Espaçamento: 30px */
+}
+
+.form-grid legend{ /* Legenda do fieldset */
+    font-style: italic; /* Itálico */
+    font-size: 1.6rem; /* Tamanho: 16px */
+    margin-bottom: 3rem; /* Espaço abaixo: 30px */
+}
+
+.form-group{ /* Cada grupo de label + input */
+    flex: 1 1 320px; /* Flex: cresce, encolhe, base de 320px */
+}
+
+.form-group label{ /* Labels dos campos */
+    display: block; /* Ocupa linha inteira */
+}
+
+.form-group input, .form-group textarea{ /* Campos de input e textarea */
+    border: none; /* Remove borda padrão */
+    background: var(--white-color); /* Fundo branco */
+    padding: 1.5rem 2rem; /* Espaçamento interno: 15px 20px */
+    width: 100%; /* Largura total */
+    outline: none; /* Remove contorno azul ao focar */
+}
+
+.form-group input:focus, .form-group textarea:focus{ /* Quando campo está em foco */
+    box-shadow: 0 0 10px var(--secondary-color); /* Sombra vermelha ao redor */
+}
+
+.form-group button{ /* Botão de enviar */
+    margin-top: 2.5rem; /* Espaço acima: 25px */
+    border: 0.5rem solid var(--white-color); /* Borda de 5px branca */
+    background: none; /* Fundo transparente */
+    color: var(--white-color); /* Texto branco */
+    padding: 1.5rem 2rem; /* Espaçamento interno */
+    font-size: 3rem; /* Tamanho: 30px */
+    cursor: pointer; /* Muda cursor para mãozinha */
+    transition: all 300ms ease-in-out; /* Transição suave */
+}
+
+.form-group button:hover{ /* Botão ao passar mouse */
+    border: 0.5rem solid var(--primary-color); /* Borda azul escuro */
+    background: var(--white-color); /* Fundo branco */
+    color: var(--primary-color); /* Texto azul escuro */
+}
+
+.form-group::placeholder{ /* Placeholder dos campos */
+    color: var(--light-gray-color); /* Cor cinza claro */
+}
+
+.footer{ /* Rodapé da página */
+    text-align: center; /* Texto centralizado */
+}
+
+.footer a{ /* Link no rodapé */
+    color: #444; /* Cor cinza escuro */
+}
+
+.footer p{ /* Parágrafo do rodapé */
+    margin: 0; /* Remove margem padrão */
+    padding: 3rem; /* Espaçamento interno: 30px */
+}
+
+.close-menu{ /* Checkbox invisível para controle do menu mobile */
+    display: none; /* Escondido */
+}
+
+.back-to-top{ /* Botão de voltar ao topo */
+    position: fixed; /* Fixo na tela */
+    bottom: 2rem; /* Distância do fundo: 20px */
+    right: 2rem; /* Distância da direita: 20px */
+    background: var(--white-color); /* Fundo branco */
+    width: 5rem; /* Largura: 50px */
+    height: 5rem; /* Altura: 50px */
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    border-radius: 50%; /* Formato de círculo */
+    color: var(--primary-color); /* Cor azul escuro */
+    transform: rotate(-90deg); /* Gira a seta para apontar para cima */
+    border: 0.3rem solid var(--primary-color); /* Borda de 3px */
+}
+
+/* Adaptação para o mobile - telas até 800px */
 @media (max-width: 800px){
-    .intro-content, .grid{
-        grid-template-columns: 1fr;
+    .intro-content, .grid{ /* Intro e grids */
+        grid-template-columns: 1fr; /* Mudam para 1 coluna */
     }
 
-    .gallery-img{
-        width: 100%;
-        max-width: 100%;
-        max-height: 100%;
-    }
-    .gallery-img img{
-        width: 100%;
-    }
-
-    .grid-one-content{
-        display: block;
-    }
-
-    .menu{
-   bottom: 0;
-   text-align: center;
+    .gallery-img{ /* Imagens da galeria */
+        width: 100%; /* Largura total */
+        max-width: 100%; /* Remove limite máximo */
+        max-height: 100%; /* Remove limite máximo */
     }
     
-    .menu-content, .menu-content ul{
-    flex-direction: column;
-    justify-content: center;
-    }
-    .menu-content{
-    height: 100vh;
+    .gallery-img img{ /* Imagens dentro da galeria */
+        width: 100%; /* Largura total */
     }
 
-    .menu{
-    display: none;
+    .grid-one-content{ /* Conteúdo do grid */
+        display: block; /* Muda de flex para block */
     }
 
-    .close-menu-label::after{
-        content: '☰';
-        position: fixed;
-        z-index: 2;
-        top: 2rem;
-        right: 2rem;
-        background: var(--primary-color);
-        color: var(--white-color);
-        font-size: 3rem;
-        line-height: 3rem;
-        width: 3rem;
-        height: 3rem;
-        text-align: center;
-        padding: 0.5rem;
-        cursor: pointer;
+    .menu{ /* Menu fixo */
+        bottom: 0; /* Gruda no fundo */
+        text-align: center; /* Texto centralizado */
     }
-
     
-    .close-menu:checked~.menu{
-        display: block;
+    .menu-content, .menu-content ul{ /* Conteúdo do menu e lista */
+        flex-direction: column; /* Mudam para coluna */
+        justify-content: center; /* Centralizam */
+    }
+    
+    .menu-content{ /* Container do menu */
+        height: 100vh; /* Altura de tela inteira */
     }
 
-    .close-menu:checked~.close-menu-label::after{
-        /*Quando o menu tiver marcado muda para um x*/
-        content: 'x';
-    }
-    .menu-spacing{
-    display: none;
+    .menu{ /* Menu */
+        display: none; /* Escondido por padrão no mobile */
     }
 
+    .close-menu-label::after{ /* Label do checkbox vira botão hamburger */
+        content: '☰'; /* Símbolo do menu hamburger */
+        position: fixed; /* Fixo na tela */
+        z-index: 2; /* Fica acima de outros elementos */
+        top: 2rem; /* Distância do topo: 20px */
+        right: 2rem; /* Distância da direita: 20px */
+        background: var(--primary-color); /* Fundo azul escuro */
+        color: var(--white-color); /* Texto branco */
+        font-size: 3rem; /* Tamanho: 30px */
+        line-height: 3rem; /* Altura da linha */
+        width: 3rem; /* Largura: 30px */
+        height: 3rem; /* Altura: 30px */
+        text-align: center; /* Centralizado */
+        padding: 0.5rem; /* Espaçamento interno: 5px */
+        cursor: pointer; /* Muda para mãozinha */
+    }
+
+    .close-menu:checked ~ .menu{ /* Quando checkbox está marcado */
+        display: block; /* Mostra o menu */
+    }
+
+    .close-menu:checked ~ .close-menu-label::after{ /* Checkbox marcado */
+        content: 'x'; /* Muda símbolo para X (fechar) */
+    }
+    
+    .menu-spacing{ /* Espaçador do menu */
+        display: none; /* Escondido no mobile */
+    }
 }

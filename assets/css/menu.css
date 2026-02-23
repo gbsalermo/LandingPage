@@ -1,58 +1,62 @@
 
-.menu{
-    background: var(--white-color);
-    position: fixed; /*ele rola junto com a pag*/
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1;
-    border-bottom: 0.01rem solid var(--light-gray-color);
+.menu{  /* Estilos da barra de menu principal */
+    background: var(--white-color); /* Fundo branco usando variável */
+    position: fixed; /* Menu fixo no topo - rola junto com a página */
+    top: 0;   /* Grudado no topo */
+    left: 0;  /* Grudado na esquerda */
+    right: 0; /* Grudado na direita */
+    width: 100%; /* Ocupa toda largura */
+    z-index: 1; /* Fica acima de outros elementos (prioridade) */
+    border-bottom: 0.01rem solid var(--light-gray-color); /* Linha sutil de separação */
 }
 
-.menu-content{ 
-    /*Para separar o menu*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0;
-    padding-bottom: 0;
+.menu-content{  /* Container interno do menu (logo + navegação) */
+    /* Para separar o menu em duas partes: logo à esquerda, nav à direita */
+    display: flex; /* Ativa flexbox */
+    justify-content: space-between; /* Espaço entre: logo na esquerda, nav na direita */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding-top: 0;    /* Remove padding superior herdado */
+    padding-bottom: 0; /* Remove padding inferior herdado */
+}
 
+.menu h1{  /* Estilo do logo (está dentro de h1) */
+    font-size: 2.3rem; /* Tamanho: 23px */
+    color: var(--primary-color); /* Cor primária (azul escuro) */
+}
 
+.menu h1 a{  /* Link dentro do logo */
+    color: inherit; /* Herda a cor do elemento pai (h1) */
+    /* Garante que o link tenha a mesma cor do h1 */
 }
-.menu h1{
-    font-size: 2.3rem;
-    color: var(--primary-color)
+
+.menu ul{  /* Lista não ordenada do menu */
+    list-style: none; /* Remove os marcadores padrão (bolinhas) */
+    margin: 0;   /* Remove margem padrão */
+    padding: 0;  /* Remove padding padrão */
+    display: flex; /* Itens em linha (horizontal) */
 }
-.menu h1 a{
-    color: inherit; 
+
+.menu ul li a{  /* Links dos itens do menu */
+    display: block; /* Torna o link um bloco clicável (área maior) */
+    padding: 1.8rem; /* Espaçamento interno: 18px em todos os lados */
+    font-size: 1.8rem; /* Tamanho: 18px */
+    font-family: 'Montserrat', sans-serif; /* Fonte dos títulos */
+    color: var(--primary-color); /* Cor primária (azul escuro) */
+    position: relative; /* Necessário para posicionar o pseudo-elemento ::after */
 }
-.menu ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-.menu ul li a{
-   display: block;
-   padding: 1.8rem; /*para ficarem separados*/
-   font-size:1.8rem;
-   font-family: 'Montserrat', sans-serif;
-   color: var(--primary-color);
-   position: relative;
-}
+
 .menu ul li a::after{
-    /*Referente a linha abaixo dos menus*/
-    content: '';
-    position: absolute;
-    bottom: 1rem;
-    left: 25%;
-    width: 0;
-    height: 0.2rem;
-    background: var(--secondary-color);
-    transition: all 300ms ease-in-out; /*efeito*/
+    /* Referente a linha abaixo dos menus (efeito hover) */
+    content: ''; /* Pseudo-elemento precisa de content mesmo vazio */
+    position: absolute; /* Posicionado em relação ao link (relative) */
+    bottom: 1rem; /* Distância de 10px do fundo do link */
+    left: 25%; /* Começa em 25% da largura do link */
+    width: 0; /* Largura inicial 0 (invisível) */
+    height: 0.2rem; /* Altura: 2px */
+    background: var(--secondary-color); /* Cor de destaque (crimson) */
+    transition: all 300ms ease-in-out; /* Efeito suave de transição */
 }
 
-.menu ul li a:hover::after{
-    width: 50%;
+.menu ul li a:hover::after{ /* Quando passa o mouse sobre o link */
+    width: 50%; /* Linha expande para 50% da largura do link */
 }

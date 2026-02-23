@@ -1,30 +1,36 @@
 .main-bg{
-    /*reponsavel pelo background principal*/
-    background-image: url('../img/main_bg.svg');
-    background-size: cover;
-    background-position: center;
-    color: var(--white-color);
+    /* Responsavel pelo background principal da página */
+    background-image: url('../img/main_bg.svg'); /* Imagem SVG de fundo (caminho relativo) */
+    background-size: cover; /* Faz a imagem cobrir toda a área sem distorcer */
+    background-position: center; /* Centraliza a imagem de fundo */
+    color: var(--white-color); /* Texto branco para contrastar com fundo escuro */
 }
+
 .white-bg{
-    /*background alternativo*/
-    background: var(--white-color);
-    color: var(--primary-color);
+    /* Background alternativo para seções com fundo branco */
+    background: var(--white-color); /* Fundo branco sólido */
+    color: var(--primary-color); /* Texto na cor primária (azul escuro) para contraste */
 }
+
 .main-content{ 
-    /*O main-content vai sustentar o conteudo*/
-    max-width: 120rem; /*largura maxima do projeto*/
-    margin: 0 auto;
-    padding: 10rem var(--gap); /*Espaçamento padrão*/
+    /* O main-content vai centralizar e limitar a largura do conteúdo */
+    max-width: 120rem; /* Largura máxima do projeto: 1200px (120 × 10px) */
+    margin: 0 auto; /* Margem automática nas laterais = centralização horizontal */
+    padding: 10rem var(--gap); /* Padding: 100px em cima/baixo, 30px nas laterais */
 }
+
 .section {
-    min-height: 100vh; /*todo mundo com essa classe vai ter essa altura minima*/
+    min-height: 100vh; /* Todas as seções ocupam no mínimo 100% da viewport height */
+    /* vh = viewport height - garante que cada seção ocupe pelo menos uma tela inteira */
 }
 
 .menu-spacing{
-    height: 65px;
+    height: 65px; /* Espaçador para compensar o menu fixo (mesma altura do menu) */
+    /* Evita que o conteúdo fique escondido atrás do menu com position: fixed */
 }
 
 div.full-width{
-    width: 100%;
-    flex: 1 1 100%;
+    width: 100%; /* Ocupa 100% da largura do container */
+    flex: 1 1 100%; /* Propriedade flex: grow = 1, shrink = 1, basis = 100% */
+    /* Faz o elemento ocupar toda a largura em layouts flexbox */
 }

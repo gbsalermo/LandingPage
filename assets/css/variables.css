@@ -1,8 +1,27 @@
-:root{ /* Criar variaveis*/
-    --primary-color:#0A1128;
-    --white-color: #ffffff;
-    --light-gray-color: #EEEEEE;
-    --secondary-color: crimson;
-    --gap: 3rem;
+:root{ 
+    /* :root = seletor especial que representa o elemento <html>*/
     
+    /* COR PRINCIPAL - Azul escuro quase preto */
+    --primary-color:#0A1128;
+    /* Usado para: fundos principais (main-bg), textos escuros, etc */
+    
+    /* COR BRANCA */
+    --white-color: #ffffff;
+    /* Usado para: fundos brancos (white-bg), textos claros sobre fundo escuro */
+    
+    /* CINZA CLARO */
+    --light-gray-color: #EEEEEE;
+    /* Usado para: fundos de elementos secundários, bordas sutis, hover states */
+    
+    /* COR DE DESTAQUE - Vermelho (carmesim) */
+    --secondary-color: crimson;
+    /* Usado para: botões, links importantes, elementos que precisam chamar atenção */
+    
+    /* ESPAÇAMENTO PADRÃO */
+    --gap: 3rem;
+    /* 3rem = 3 × tamanho da fonte do elemento raiz (geralmente 48px)
+       Usado para: gaps em grids, margens entre seções, padding */
+    
+    /* Observação: Este arquivo é o PRIMEIRO a ser carregado no HTML
+       para que todas as variáveis estejam disponíveis para os outros CSS */
 }

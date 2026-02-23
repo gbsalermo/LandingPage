@@ -1,82 +1,96 @@
 
-*{
-    margin: 0;
-    padding: 0;
+*{  /* Seletor universal - aplica a todos os elementos da página */
+    margin: 0;    /* Remove a margem padrão dos navegadores */
+    padding: 0;   /* Remove o preenchimento padrão dos navegadores */
 }
     
-
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth; /*para a tela rolar quando clicar na seção*/
+html{  /* Estilos para o elemento raiz do documento */
+    font-size: 62.5%;  /* Define 1rem = 10px (62.5% de 16px) */
+    scroll-behavior: smooth; /* Ativa rolagem suave ao clicar em links internos */
 }
 
-body{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
-    color: var(--primary-color); /*chamo a variavel*/
-    line-height: 1.2;
+body{  /* Estilos para o corpo da página */
+    font-family: 'Open Sans', sans-serif; /* Fonte principal para textos */
+    font-size: 2rem;  /* Tamanho da fonte: 20px */
+    color: var(--primary-color); /* Cor do texto usando variável CSS */
+    line-height: 1.5; /* Altura da linha: 1.5x o tamanho da fonte */
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Montserrat', sans-serif;
+/* TÍTULOS - Todos os níveis de heading */
+h1, h2, h3, h4, h5, h6 {  /* Agrupa todos os títulos */
+    font-family: 'Montserrat', sans-serif; /* Fonte específica para títulos */
 }
 
-h1{
-    font-size: 6rem;
-    text-transform: uppercase;
-}
-h2{
-    font-size: 8rem;
-    margin-bottom: 5rem;
-    text-transform: uppercase;
-}
-h3{
-    font-size: 5rem;
-}
-h4{
-    font-size: 4.5rem;
-}
-h5{
-    font-size: 4rem;
-}
-h6{
-    font-size: 3.5rem;
+h1{  /* Título nível 1 */
+    font-size: 6rem;  /* Tamanho: 60px */
+    text-transform: uppercase; /* Transforma texto em maiúsculas */
+    line-height: 1.2; /* Altura da linha: 1.2x o tamanho da fonte */
 }
 
-a{
-    text-decoration: none; 
-}
-p{
-    margin-bottom: 3rem;
-}
-
-.responsive-table{
-    overflow: hidden;
-
-    overflow-x: auto;
-
+h2{  /* Título nível 2 */
+    font-size: 8rem;  /* Tamanho: 80px */
+    margin-bottom: 5rem; /* Espaçamento inferior de 50px */
+    text-transform: uppercase; /* Transforma texto em maiúsculas */
+    line-height: 1.2; /* Altura da linha: 1.2x o tamanho da fonte */
 }
 
-table{
-    min-width: 360px;
-    width: 100%; 
-    border-collapse: collapse;
+h3{  /* Título nível 3 */
+    font-size: 5rem;  /* Tamanho: 50px */
+    line-height: 1.2; /* Altura da linha: 1.2x o tamanho da fonte */
 }
 
-table caption{
-    font-style: italic;
-    font-size: 1.6rem;
-    text-align: left;
-    margin-bottom: 1rem;
+h4{  /* Título nível 4 */
+    font-size: 4.5rem;  /* Tamanho: 45px */
+    line-height: 1.2; /* Altura da linha: 1.2x o tamanho da fonte */
 }
 
-table td, table th{
-    word-wrap: nowrap; /*Pra não quebrar linha*/
-    padding: 1rem;
-    text-align: left;
-    border: 0.1rem solid var(--ligth-gray-color);
+h5{  /* Título nível 5 */
+    font-size: 4rem;  /* Tamanho: 40px */
+    line-height: 1.2; /* Altura da linha: 1.2x o tamanho da fonte */
 }
 
-tfoot td, table th{
-    background: var(--ligth-gray-color);
+h6{  /* Título nível 6 */
+    font-size: 3.5rem;  /* Tamanho: 35px */
+    line-height: 1.2; /* Altura da linha: 1.2x o tamanho da fonte */
+}
+
+a{  /* Links */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+p{  /* Parágrafos */
+    margin-bottom: 3rem; /* Espaçamento inferior de 30px entre parágrafos */
+}
+
+/* TABELAS */
+.responsive-table{  /* Container para tabelas responsivas */
+    overflow-x: auto; /* Adiciona scroll horizontal em telas pequenas */
+}
+
+table{  /* Estilos base para tabelas */
+    min-width: 360px; /* Largura mínima para não comprimir demais */
+    width: 100%;      /* Ocupa 100% da largura do container */
+    border-collapse: collapse; /* Remove espaços entre bordas das células */
+}
+
+table caption{  /* Legenda da tabela */
+    font-style: italic; /* Texto em itálico */
+    font-size: 1.6rem;  /* Tamanho: 16px */
+    text-align: left;    /* Alinhamento à esquerda */
+    margin-bottom: 1rem; /* Espaçamento inferior de 10px */
+}
+
+table td, table th{  /* Células de dados e cabeçalho */
+    white-space: nowrap; /* Impede quebra de linha no texto */
+    padding: 1rem;     /* Espaçamento interno de 10px */
+    text-align: left;   /* Texto alinhado à esquerda */
+    border: 0.1rem solid var(--light-gray-color); /* Borda de 1px ao redor */
+}
+
+tfoot td{  /* Células do rodapé da tabela */
+    background: var(--light-gray-color); /* Fundo cinza claro */
+}
+
+table th{  /* Células de cabeçalho da tabela */
+    background: var(--light-gray-color); /* Fundo cinza claro */
 }
